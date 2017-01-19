@@ -1,0 +1,25 @@
+.row {
+	
+	@mixin clearFix; /* See mixins, adds blank content ::AFTER this element */
+	
+	@mixin atMedium {
+		&__medium-4 {
+		float: left;
+		width: 33.33% /* 12 total grid is 12/4 for 1 section. x this by 4 for this section */
+		}
+
+		&__medium-8 {
+		float: left;
+		width: 66.66%
+		}
+	}
+	
+
+	&--gutters {
+		margin-right: -65px;
+	}
+
+	&--gutters > div {   /* >selects all direct children with tag of div */
+		padding-right: 65px;
+	}
+}
